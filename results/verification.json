@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "independent_qp_cases": 9,
+  "checks": [
+    "exact physical discretization",
+    "prediction matrix roll-out",
+    "analytic gradient",
+    "positive definite cost Hessian",
+    "independent active-set QP comparison",
+    "saved trajectory dynamics",
+    "input bounds",
+    "optimality residuals",
+    "final tracking errors"
+  ]
+}

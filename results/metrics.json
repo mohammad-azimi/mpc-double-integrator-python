@@ -1,0 +1,87 @@
+{
+  "settings": [
+    {
+      "label": "Baseline",
+      "slug": "baseline",
+      "prediction_horizon": 10,
+      "control_horizon": 3,
+      "sample_time": 0.1,
+      "input_limit": 1.0,
+      "tracking_weight": 1.0,
+      "move_weight": 0.1,
+      "duration": 10.0,
+      "reference": 1.0
+    },
+    {
+      "label": "Tighter input limit",
+      "slug": "tighter_input",
+      "prediction_horizon": 10,
+      "control_horizon": 3,
+      "sample_time": 0.1,
+      "input_limit": 0.4,
+      "tracking_weight": 1.0,
+      "move_weight": 0.1,
+      "duration": 10.0,
+      "reference": 1.0
+    },
+    {
+      "label": "Longer prediction horizon",
+      "slug": "longer_horizon",
+      "prediction_horizon": 20,
+      "control_horizon": 3,
+      "sample_time": 0.1,
+      "input_limit": 1.0,
+      "tracking_weight": 1.0,
+      "move_weight": 0.1,
+      "duration": 10.0,
+      "reference": 1.0
+    }
+  ],
+  "metrics": [
+    {
+      "scenario": "Baseline",
+      "prediction_horizon": 10,
+      "control_horizon": 3,
+      "input_limit": 1.0,
+      "rmse": 0.2851016236857627,
+      "iae": 1.072356581307652,
+      "settling_time_2pct_s": 2.9000000000000004,
+      "overshoot_pct": 9.16454332708807,
+      "peak_abs_input": 1.0,
+      "final_abs_error": 4.1687247798183336e-07,
+      "input_squared_integral": 1.8212169098827489,
+      "max_optimality_residual": 7.57163202991587e-07,
+      "optimization_solves": 100
+    },
+    {
+      "scenario": "Tighter input limit",
+      "prediction_horizon": 10,
+      "control_horizon": 3,
+      "input_limit": 0.4,
+      "rmse": 0.36299550118436386,
+      "iae": 1.943653396695504,
+      "settling_time_2pct_s": 5.7,
+      "overshoot_pct": 25.99575856517753,
+      "peak_abs_input": 0.4,
+      "final_abs_error": 3.7078923602607006e-05,
+      "input_squared_integral": 0.7261449918400164,
+      "max_optimality_residual": 7.150654933559192e-07,
+      "optimization_solves": 100
+    },
+    {
+      "scenario": "Longer prediction horizon",
+      "prediction_horizon": 20,
+      "control_horizon": 3,
+      "input_limit": 1.0,
+      "rmse": 0.28482532752752593,
+      "iae": 1.019999661392152,
+      "settling_time_2pct_s": 2.5,
+      "overshoot_pct": 2.9604764291047525,
+      "peak_abs_input": 1.0,
+      "final_abs_error": 1.6297254679109585e-07,
+      "input_squared_integral": 1.6986481803241729,
+      "max_optimality_residual": 4.695525738852519e-06,
+      "optimization_solves": 100
+    }
+  ]
+}
